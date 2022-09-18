@@ -1,0 +1,17 @@
+query Country {
+  country(code: "BR") {
+    ...CountryFields
+  }
+}
+
+fragment CountryFields on Country {
+  name
+  native
+  capital
+  emoji
+  currency
+  languages {
+    code
+    name
+  }
+}
